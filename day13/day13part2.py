@@ -4,6 +4,15 @@
 Bus schedules
 """
 
+#############
+# So it looks like the key to this is the Chinese Remainder
+# Theorem - https://crypto.stanford.edu/pbc/notes/numbertheory/crt.html
+#
+# I don't want to implement this until I understand that theorem better,
+# so will return to it later.
+#############
+
+
 from pathlib import Path
 import time
 import math
@@ -33,7 +42,6 @@ for offset, bus in enumerate(schedule):
 
 lcm = math.lcm(*[b[0] for b in buses])
 print(f'{lcm=}')
-
 
 
 # # Sorting will put the largest bus numb er at the end
